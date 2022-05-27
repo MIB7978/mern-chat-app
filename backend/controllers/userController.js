@@ -77,4 +77,7 @@ const alluser = asynchandler(async (req,res)=>{
 
 });
 
+
+
+
 module.exports = { registeruser, authuser ,alluser};
