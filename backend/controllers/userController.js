@@ -67,7 +67,7 @@ const alluser = asynchandler(async (req,res)=>{
       {
         $or: [
           { name: { $regex: req.query.search, $options: "i" } },
-          { email: { $regex: req.query.search, $options: "i" } },
+          // { email: { $regex: req.query.search, $options: "i" } },
         ],
       }:{}
       const user = await User.find(keyword).find({ _id: { $ne: req.user._id } });
